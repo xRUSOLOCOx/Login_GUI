@@ -1,4 +1,6 @@
 import flet as ft
+from controllers.app_navegation import app_navegation
+from controllers.app_context import app_context
 
 
 def sign_in_component():
@@ -13,8 +15,8 @@ def sign_in_component():
                 # Controles principales de componente sign in:
 
                 ft.Text(value="INICIO DE SESIÓN USUARIO",size=30,weight=ft.FontWeight.BOLD),
-                ft.TextField(label="Correo",width=550,border_color="white"),
-                ft.TextField(label="Contraseña",width=550,border_color="white"),
+                ft.TextField(label="Correo:",width=550,border_color="white"),
+                ft.TextField(label="Contraseña:",width=550,border_color="white"),
 
                 # Boton de envio de datos:
 
@@ -25,8 +27,33 @@ def sign_in_component():
                     
                     [
                         
-                        ft.Text(spans=[ft.TextSpan(text="¿olvidaste tu contraseña?")],color="#09C1FF"),
-                        ft.Text(spans=[ft.TextSpan(text="!Registrate Aqui¡")],color="#09C1FF")
+                        ft.Text(
+                                
+                                spans=[ft.TextSpan(
+                                        
+                                        
+                                    text="¿olvidaste tu contraseña?",
+                                    
+                                        
+                                        
+                                    )],
+                                
+                                    color="#09C1FF"
+                                
+                        ),
+
+
+                        ft.Text(
+                                
+                                spans=[ft.TextSpan(
+                                        
+                                        text="¡Registrate Aqui!",
+                                        
+                                        on_click=lambda e: app_navegation.component_switcher(e,app_context.main_container) 
+                                        
+                                        )],
+                                        
+                                        color="#09C1FF")
                      
                      ],
                     

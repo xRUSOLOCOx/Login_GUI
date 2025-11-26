@@ -5,6 +5,8 @@ import flet as ft
 from components.header import header
 from components.navegation import navegation
 from components.content import content
+from controllers.app_context import app_context
+
 
 # CONTROLADORES:
 
@@ -13,7 +15,8 @@ from controllers.app_navegation import app_navegation
 def main_component():
 
     content_component = content.content_component()
-
+    app_context.main_container = content_component
+    
     return ft.Column(
 
             [
@@ -66,4 +69,5 @@ def main_component():
             
         )
 
+        
     
