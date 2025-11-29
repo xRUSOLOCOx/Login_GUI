@@ -14,7 +14,7 @@ def show_alert_banner(e,message):
     # Modificación de propiedades de control:
 
     banner_content.controls[1].value = message
-    banner.bgcolor = "#E8DC9E"
+    banner.bgcolor = "#F03636"
     banner.visible = True
     banner.opacity = 0
     banner.update()

@@ -28,21 +28,27 @@ def sign_up_component():
                         content=ft.Row(
                                 
                             [
-                                ft.Icon(ft.Icons.WARNING_AMBER_ROUNDED, color=ft.Colors.AMBER, size=40),
+                                ft.Icon(
+                                        
+                                    ft.Icons.WARNING_AMBER_ROUNDED, 
+                                    color=ft.Colors.WHITE, 
+                                    size=40
+                                    
+                                    ),
 
                                 ft.Text(
 
                                     value ="",
-                                    color=ft.Colors.BLACK,
+                                    color=ft.Colors.WHITE,
                                     expand=1,
-                                    weight=ft.FontWeight.BOLD
+                                    weight=ft.FontWeight.NORMAL
                                 ),
 
                                 ft.TextButton(
                                     
                                     text="SALIR",
                                     on_click=lambda e:hide_banners.hide_alert_banner(e),
-                                    style=ft.ButtonStyle(color="red")
+                                    style=ft.ButtonStyle(color="white")
                                     ),
     
                             ],
