@@ -1,6 +1,7 @@
 import re
 import flet as ft
 from controllers.data_verification.show_banners import show_banners
+from controllers.data_verification.hide_banners import hide_banners
 from controllers.data_verification.sign_up_errors import sign_up_errors
 
 
@@ -12,6 +13,7 @@ regular_expressions = {
     "password": r"^(?=.*[A-Z])(?=.*\d)[A-Za-z\d@#$%^&+=!¡¿?._-]{8,}$",
         
 }
+
 
 def sign_up_verification(e):
 
@@ -25,6 +27,8 @@ def sign_up_verification(e):
     user_age = column[2].controls[1]
     user_email = column[3]
     user_password = column[4]
+    
+    # Verificación y asignacion de capmpos de texto:
     
     if sign_up_errors.sign_up_error_fields(user_name,user_age,user_email,user_password):
 
@@ -54,6 +58,17 @@ def sign_up_verification(e):
             show_banners.show_alert_banner(e,errors_log[0])
             errors_log.clear()
 
+        # Envio de datos:
+        
         else:
             
-            print(user_name.value,user_email.value,user_age.value,user_password.value)
+            banner_element = e.control.parent.controls[0]
+            
+            if banner_element.opacity == 1:
+            
+                hide_banners.hide_alert_banner(e)
+                
+            
+            else:
+                
+                pass

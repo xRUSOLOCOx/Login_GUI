@@ -61,7 +61,7 @@ def sign_up_component():
 
 
 
-                ft.Text(value="CREA TU CUENTA USUARIO",size=30,weight=ft.FontWeight.BOLD),
+                ft.Text(value="CREA TU CUENTA USUARIO",size=30,weight=ft.FontWeight.BOLD,color="white"),
                 
 
                 ft.Row(
@@ -74,7 +74,9 @@ def sign_up_component():
                             label="Nombre Completo:",
                             border_color="white",
                             width=265,
-                            on_blur=lambda e: sign_up_errors.sign_up_errors(e)
+                            on_blur=lambda e: sign_up_errors.sign_up_errors(e),
+                            color="white",
+                            
                                 
                         ),
 
@@ -83,7 +85,9 @@ def sign_up_component():
                             label="Edad:",
                             border_color="white",
                             width=265,
-                            on_blur=lambda e: sign_up_errors.sign_up_errors(e)
+                            on_blur=lambda e: sign_up_errors.sign_up_errors(e),
+                            color="white",
+                            
                             
                             ),
                             
@@ -102,7 +106,9 @@ def sign_up_component():
                         label="Correo:",
                         width=550,
                         border_color="white",
-                        on_blur=lambda e: sign_up_errors.sign_up_errors(e)
+                        on_blur=lambda e: sign_up_errors.sign_up_errors(e),
+                        color="white",
+                        
 
                         ),
 
@@ -112,7 +118,9 @@ def sign_up_component():
                         width=550,
                         border_color="white",
                         on_blur=lambda e: sign_up_errors.sign_up_errors(e),
-                        password=True
+                        password=True,
+                        color="white",
+                        
 
                         ),
 
@@ -176,6 +184,7 @@ def sign_up_component():
 
         padding=ft.padding.only(top=60),
         data="sign_up_component",
-        animate_offset=300
+        animate_offset=300,
+        bgcolor="#1b1d1e"
         
         )

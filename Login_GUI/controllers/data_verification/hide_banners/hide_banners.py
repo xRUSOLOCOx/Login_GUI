@@ -5,8 +5,8 @@ def hide_alert_banner(e):
 
     # Extraccion de referencia controles necesarios:
 
-    container = e.control.parent.parent.parent.parent
-    banner = e.control.parent.parent
+    container = e.control.parent.parent
+    banner = e.control.parent.controls[0]
 
     # Modificación de propiedades de control:
 

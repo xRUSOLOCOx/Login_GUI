@@ -20,7 +20,8 @@ class App:
         page.window.min_height = 700
         page.window.max_width = 1200
         page.window.max_height = 700
-
+        
+        page.bgcolor = "#1b1d1e"
 
         page.add(
 

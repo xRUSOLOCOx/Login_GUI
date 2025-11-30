@@ -73,6 +73,7 @@ def nav_component(component_switcher):
 
         ),
 
-        padding=ft.padding.only(left=10,top=40,right=20)
+        padding=ft.padding.only(left=10,top=40,right=20),
+        bgcolor="#1b1d1e"
 
         )

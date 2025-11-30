@@ -14,14 +14,42 @@ def sign_in_component():
 
                 # Controles principales de componente sign in:
 
-                ft.Text(value="INICIO DE SESIÓN USUARIO",size=30,weight=ft.FontWeight.BOLD),
-                ft.TextField(label="Correo:",width=550,border_color="white"),
-                ft.TextField(label="Contraseña:",width=550,border_color="white"),
+                ft.Text(
+                    
+                    value="INICIO DE SESIÓN USUARIO",
+                    size=30,
+                    weight=ft.FontWeight.BOLD,
+                    color="white"
+                    
+               ),
+                
+                ft.TextField(
+                    
+                    label="Correo:",
+                    width=550,
+                    border_color="white",
+                    color="white"
+                    
+                ),
+                
+                ft.TextField(
+                    
+                    label="Contraseña:",
+                    width=550,border_color="white",
+                    color="white"
+                    
+                ),
 
                 # Boton de envio de datos:
 
-                ft.Button(text="ENTRAR",width=550,bgcolor="green",color="black",style=ft.ButtonStyle(shape=ft.ContinuousRectangleBorder(10))),
-
+                ft.Button(
+                    
+                    text="ENTRAR",
+                    width=550,bgcolor="green",
+                    color="black",
+                    style=ft.ButtonStyle(shape=ft.ContinuousRectangleBorder(10))
+                    
+                ),
 
                 ft.Row(
                     
@@ -71,7 +99,7 @@ def sign_in_component():
 
         padding=ft.padding.only(top=70),
         animate_opacity=300,
-        data="sign_in_component"
-        
-                                                                             
+        data="sign_in_component",
+        bgcolor="#1b1d1e"
+                                                                          
         )
