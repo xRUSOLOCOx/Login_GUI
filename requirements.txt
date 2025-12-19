@@ -1,0 +1,7 @@
+flet>=0.10.0
+mysql-connector-python>=8.0.0
+bcrypt>=4.0.0
+
+# Optional (uncomment/pin if you use them):
+# rich>=12.0.0
+# python-dotenv>=0.21.0
